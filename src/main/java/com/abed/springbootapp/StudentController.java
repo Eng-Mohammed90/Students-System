@@ -60,32 +60,22 @@ public class StudentController {
         return String.format("%s",s) ;
     }
 
-
-        @RequestMapping("/add")
-        @ResponseBody
-        public String add(@RequestParam String name,
-                          @RequestParam String major,
-                          @RequestParam Double grade) {
-    // ننشئ object جديد من Student
+@RequestMapping("/add")
+@ResponseBody
+public String add(@RequestParam String name,
+                  @RequestParam String major,
+                  @RequestParam Double grade) {
     Student s = new Student();
     s.setName(name);
     s.setMajor(major);
     s.setGrade(grade);
 
-    // تخزين الطالب في قاعدة البيانات
     repo.save(s);
 
     return "Student added: " + s.toString();
 }
 
-    // Create
-    @PostMapping
-    public ResponseEntity<Student> create(@RequestBody Student student, UriComponentsBuilder uriBuilder) {
-        Student saved = repo.save(student);
-        URI uri = uriBuilder.path("/api/students/{id}").buildAndExpand(saved.getId()).toUri();
-        return ResponseEntity.created(uri).body(saved);
-    }
-
+        
     @RequestMapping("/update/{id}")
     @ResponseBody
     public String update(@PathVariable Integer id,
