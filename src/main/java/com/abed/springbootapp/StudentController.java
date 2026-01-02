@@ -44,7 +44,7 @@ public class StudentController {
     // Read all
     @RequestMapping("/showAll")
     public String showAll() {
-        List <Student>students = repo.findAll();
+        List <Student> students = repo.findAll();
         String str = "";
         for(Student s : students) {
             
