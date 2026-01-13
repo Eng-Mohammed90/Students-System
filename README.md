@@ -30,5 +30,5 @@ To update a student info: (for example): https://students-system-production-85d7
 
 
 for deleting a student: https://students-system-production-85d7.up.railway.app/delete/2 (2 is the ID number).
-=======
+
 for deleting a student: https://students-system-production-85d7.up.railway.app/delete/2 (2 is the ID number).
