@@ -28,4 +28,8 @@ For adding a new student: (for example) https://students-system-production-85d7.
 
 To update a student info: (for example): https://students-system-production-85d7.up.railway.app/update/2?name=Omar&major=CS&grade=88 (and you can edit the ID number (2) and other values)
 
+<<<<<<< HEAD
 for deleting a student: https://students-system-production-85d7.up.railway.app/delete/2 (2 is the ID number).
+=======
+for deleting a student: https://students-system-production-85d7.up.railway.app/delete/2 (2 is the ID number).
+>>>>>>> bb14cc4 (Update README and add VPS deployment documentation and screenshots)
